@@ -4,13 +4,14 @@
 
 This project implements and evaluates several algorithms for solving the Traveling Salesman Problem (TSP) using benchmark datasets from TSPLIB.
 
-The notebook includes:
+The project focuses on:
 
-* Greedy construction algorithms
-* Local search optimization algorithms
-* Performance comparison and evaluation
-* Visualization of generated tours
-* Experiments on multiple benchmark datasets
+* Greedy construction heuristics
+* Local search optimization techniques
+* Performance evaluation
+* Route visualization and comparison
+
+The implementations are tested on multiple TSPLIB benchmark datasets.
 
 ### Datasets Used
 
@@ -42,11 +43,11 @@ The notebook includes:
 
 ### Additional Features
 
-* Tour validation
 * Distance matrix generation
+* Tour validation
 * Runtime measurement
 * Route visualization using Matplotlib
-* Algorithm performance comparison
+* Performance comparison between algorithms
 
 ---
 
@@ -54,13 +55,15 @@ The notebook includes:
 
 ```text
 .
-├── Final_code.ipynb      # Main notebook containing all implementations
-├── berlin52.tsp          # Berlin52 dataset (required)
-├── eil76.tsp             # Eil76 dataset (required)
-├── kroA100.tsp           # KroA100 dataset (required)
-├── ch130.tsp             # Ch130 dataset (required)
-├── README.md
-└── .gitignore
+├── .vscode/                # VSCode configuration files
+├── Dataset/                # TSPLIB datasets
+│   ├── berlin52.tsp
+│   ├── eil76.tsp
+│   ├── kroA100.tsp
+│   └── ch130.tsp
+├── Visualization/          # Visualization outputs and plots
+├── Final.ipynb             # Main notebook containing all implementations
+└── README.md
 ```
 
 ---
@@ -87,29 +90,20 @@ The project mainly uses:
 
 This project uses benchmark datasets from TSPLIB.
 
-### Download the datasets
-
-* Berlin52
-* Eil76
-* KroA100
-* Ch130
-
 ### Official TSPLIB Website
 
 https://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/
 
-Place all `.tsp` files in the same directory as the notebook.
+Place all `.tsp` dataset files inside the `Dataset/` folder.
 
-### Example Directory Structure
+### Example
 
 ```text
-.
-├── Final_code.ipynb
+Dataset/
 ├── berlin52.tsp
 ├── eil76.tsp
 ├── kroA100.tsp
-├── ch130.tsp
-└── README.md
+└── ch130.tsp
 ```
 
 ---
@@ -147,19 +141,32 @@ jupyter notebook
 Then open:
 
 ```text
-Final_code.ipynb
+Final.ipynb
 ```
 
 Run all cells sequentially.
 
 The notebook will:
 
-1. Load the datasets
+1. Load TSPLIB datasets
 2. Generate distance matrices
 3. Execute TSP algorithms
 4. Apply local search improvements
-5. Display performance metrics
-6. Visualize tours and comparisons
+5. Compare algorithm performance
+6. Visualize generated tours
+
+---
+
+## Visualization
+
+The project includes visualization features using Matplotlib to display:
+
+* TSP tours
+* Route improvements
+* Algorithm comparisons
+* Optimization results
+
+Visualization outputs can be stored inside the `Visualization/` folder.
 
 ---
 
@@ -168,29 +175,19 @@ The notebook will:
 The notebook provides:
 
 * Total tour distance
-* Execution time
-* Improved routes after local search
-* Visual comparison charts
-* Route plots for each algorithm
-
----
-
-## Visualization
-
-The project uses Matplotlib to visualize:
-
-* TSP tours
-* Comparison between algorithms
-* Improvement after optimization
+* Runtime analysis
+* Improved tours after local search
+* Route plots
+* Algorithm comparison results
 
 ---
 
 ## Algorithms Summary
 
-| Category     | Algorithms                                                                                        |
-| ------------ | ------------------------------------------------------------------------------------------------- |
-| Greedy       | Repeated Nearest Neighbor, Nearest Insertion, Farthest Insertion, Cheapest Insertion, Greedy Edge |
-| Local Search | Relocate, Swap, 2-Opt                                                                             |
+| Category                | Algorithms                                                                                        |
+| ----------------------- | ------------------------------------------------------------------------------------------------- |
+| Greedy Algorithms       | Repeated Nearest Neighbor, Nearest Insertion, Farthest Insertion, Cheapest Insertion, Greedy Edge |
+| Local Search Algorithms | Relocate, Swap, 2-Opt                                                                             |
 
 ---
 
@@ -199,8 +196,8 @@ The project uses Matplotlib to visualize:
 This project is suitable for:
 
 * Algorithm analysis
-* Operations research courses
-* AI and optimization studies
+* Operations Research courses
+* Artificial Intelligence and Optimization studies
 * Heuristic algorithm experiments
 * Comparing local search strategies
 
@@ -215,7 +212,7 @@ Possible extensions:
 * Ant Colony Optimization (ACO)
 * Tabu Search
 * Interactive GUI visualization
-* More TSPLIB datasets
+* Additional TSPLIB benchmark datasets
 
 ---
 
